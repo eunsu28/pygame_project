@@ -10,3 +10,5 @@ while True:
             pygame.quit()
             sys.exit()
     pygame.display.update()
+
+#https://parkjh7764.tistory.com/88
