@@ -18,7 +18,7 @@ while True:
             pygame.quit()
             sys.exit()
     #write your code
-    DISPLAYSURF.blit(character, (250,250))
+    DISPLAYSURF.blit(character, (200,400))
     #
     pygame.display.update()
 
