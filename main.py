@@ -12,7 +12,8 @@ color = (255, 255, 255)
 DISPLAYSURF.fill(color)
 pygame.display.flip()
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -31,4 +32,6 @@ while True:
     #
     pygame.display.update()
 
+
+print("game finished")
 #https://parkjh7764.tistory.com/89?category=1206156
