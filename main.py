@@ -30,7 +30,7 @@ while running:
             elif event.key == pygame.K_w: 
                 print("up")
     #write your code
-    DISPLAYSURF.blit(character, (200,400))
+    DISPLAYSURF.blit(character, (character_x, character_y))
     #
     pygame.display.update()
 
