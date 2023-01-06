@@ -22,7 +22,7 @@ while running:
             sys.exit()
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
-                print("left")
+                character_x += 10
             elif event.key == pygame.K_d: 
                 print("right")
             elif event.key == pygame.K_s: 
