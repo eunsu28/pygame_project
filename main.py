@@ -9,6 +9,7 @@ pygame.init()
 DISPLAYSURF = pygame.display.set_mode((500, 500))
 pygame.display.set_caption('Hello World!')
 color = (255, 255, 255)
+clock = pygame.time.Clock()
  
 # Changing surface color
 DISPLAYSURF.fill(color)
@@ -16,6 +17,7 @@ pygame.display.flip()
 
 running = True
 while running:
+    dt = clock.tick(120)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
