@@ -2,6 +2,8 @@ import pygame, sys
 from pygame.locals import QUIT
 
 character = pygame.image.load("jet.png")
+character_x = 200
+character_y = 400
 
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((500, 500))
