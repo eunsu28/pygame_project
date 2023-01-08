@@ -24,9 +24,9 @@ while running:
             sys.exit()
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
-                character_x += 10
+                character_x -= 10
             elif event.key == pygame.K_d: 
-                print("right")
+                character_x += 10
             elif event.key == pygame.K_s: 
                 print("down")
             elif event.key == pygame.K_w: 
