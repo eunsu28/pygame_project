@@ -10,10 +10,6 @@ DISPLAYSURF = pygame.display.set_mode((500, 500))
 pygame.display.set_caption('Hello World!')
 color = (255, 255, 255)
 clock = pygame.time.Clock()
- 
-# Changing surface color
-DISPLAYSURF.fill(color)
-pygame.display.flip()
 
 running = True
 while running:
@@ -28,10 +24,11 @@ while running:
             elif event.key == pygame.K_d: 
                 character_x += 10
             elif event.key == pygame.K_s: 
-                print("down")
+                character_y += 10
             elif event.key == pygame.K_w: 
-                print("up")
+                character_y -= 10
     #write your code
+    DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
     #
     pygame.display.update()
