@@ -1,16 +1,20 @@
+# import things
 import pygame, sys
 from pygame.locals import QUIT
 
+#character
 character = pygame.image.load("jet.png")
 character_x = 200
 character_y = 400
 
+#basic settings
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((500, 500))
 pygame.display.set_caption('Hello World!')
 color = (255, 255, 255)
 clock = pygame.time.Clock()
 
+#main
 running = True
 while running:
     dt = clock.tick(120)
@@ -35,4 +39,3 @@ while running:
 
 
 print("game finished")
-#https://parkjh7764.tistory.com/89?category=1206156
