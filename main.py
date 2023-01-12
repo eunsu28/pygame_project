@@ -37,5 +37,4 @@ while running:
     #
     pygame.display.update()
 
-
-print("game finished")
+#fin
