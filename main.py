@@ -10,7 +10,7 @@ character_y = 400
 #basic settings
 pygame.init()
 DISPLAYSURF = pygame.display.set_mode((500, 500))
-pygame.display.set_caption('Hello World!')
+pygame.display.set_caption('GAME')
 color = (255, 255, 255)
 clock = pygame.time.Clock()
 
@@ -36,7 +36,7 @@ while running:
     DISPLAYSURF.blit(character, (character_x, character_y))
 
     if character_x > 400 or character_x < 0:
-        print("gameover")
+        pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(color)
         DISPLAYSURF.blit(character, (character_x, character_y))
         running = False
