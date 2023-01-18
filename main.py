@@ -34,6 +34,13 @@ while running:
     #write your code
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
+
+    if character_x > 400 or character_x < 0:
+        print("gameover")
+        DISPLAYSURF.fill(color)
+        DISPLAYSURF.blit(character, (character_x, character_y))
+        running = False
+  
     #
     pygame.display.update()
 
