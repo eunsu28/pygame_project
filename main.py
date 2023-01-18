@@ -41,6 +41,11 @@ while running:
         DISPLAYSURF.fill(red)
         DISPLAYSURF.blit(character, (character_x, character_y))
         running = False
+    if character_y > 400 or character_y < 0:
+        pygame.display.set_caption("GAME OVER")
+        DISPLAYSURF.fill(red)
+        DISPLAYSURF.blit(character, (character_x, character_y))
+        running = False
   
     #
     pygame.display.update()
