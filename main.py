@@ -1,6 +1,7 @@
 # import things
 import pygame, sys
 from pygame.locals import QUIT
+from time import sleep
 
 #character
 character = pygame.image.load("jet.png")
@@ -12,6 +13,7 @@ pygame.init()
 DISPLAYSURF = pygame.display.set_mode((500, 500))
 pygame.display.set_caption('GAME')
 color = (255, 255, 255)
+red = (255, 0, 0)
 clock = pygame.time.Clock()
 
 #main
@@ -20,8 +22,7 @@ while running:
     dt = clock.tick(120)
     for event in pygame.event.get():
         if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
+            running == False
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
                 character_x -= 10
@@ -37,11 +38,14 @@ while running:
 
     if character_x > 400 or character_x < 0:
         pygame.display.set_caption("GAME OVER")
-        DISPLAYSURF.fill(color)
+        DISPLAYSURF.fill(red)
         DISPLAYSURF.blit(character, (character_x, character_y))
         running = False
   
     #
     pygame.display.update()
 
+sleep(4)
+pygame.quit()
+sys.exit()
 #fin
