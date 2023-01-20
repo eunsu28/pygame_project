@@ -27,28 +27,26 @@ while running:
             running == False
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
-                x -= 1
+                x -= 0.01
             elif event.key == pygame.K_d: 
-                x += 1
+                x += 0.01
             elif event.key == pygame.K_s: 
-                y += 1
+                y += 0.01
             elif event.key == pygame.K_w: 
-                y -= 1
+                y -= 0.01
     #write your code
-    character_x += x
-    character_y += y
+    character_x += x * dt
+    character_y += y * dt
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
 
-    if character_x > 400 or character_x < 0:
+    if character_x > 425 or character_x < -25:
         pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(red)
-        DISPLAYSURF.blit(character, (character_x, character_y))
         running = False
-    if character_y > 400 or character_y < 0:
+    if character_y > 425 or character_y < -25:
         pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(red)
-        DISPLAYSURF.blit(character, (character_x, character_y))
         running = False
   
     #
