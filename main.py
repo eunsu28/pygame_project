@@ -34,12 +34,13 @@ while running:
                 y += 0.01
             elif event.key == pygame.K_w: 
                 y -= 0.01
-    #write your code
+    #change x y
     character_x += x * dt
     character_y += y * dt
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
 
+    #gameover
     if character_x > 725 or character_x < -25:
         pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(red)
