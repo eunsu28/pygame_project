@@ -7,6 +7,8 @@ from time import sleep
 character = pygame.image.load("jet.png")
 character_x = 200
 character_y = 400
+x = 0
+y = 0
 
 #basic settings
 pygame.init()
@@ -19,20 +21,24 @@ clock = pygame.time.Clock()
 #main
 running = True
 while running:
-    dt = clock.tick(120)
+    dt = clock.tick(60)
     for event in pygame.event.get():
         if event.type == QUIT:
             running == False
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
-                character_x -= 10
+                x -= 10
             elif event.key == pygame.K_d: 
-                character_x += 10
+                x += 10
             elif event.key == pygame.K_s: 
-                character_y += 10
+                y += 10
             elif event.key == pygame.K_w: 
-                character_y -= 10
+                y -= 10
     #write your code
+    character_x += x
+    character_y += y
+    x = 0
+    y = 0
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
 
