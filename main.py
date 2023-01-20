@@ -27,18 +27,16 @@ while running:
             running == False
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_a: 
-                x -= 10
+                x -= 1
             elif event.key == pygame.K_d: 
-                x += 10
+                x += 1
             elif event.key == pygame.K_s: 
-                y += 10
+                y += 1
             elif event.key == pygame.K_w: 
-                y -= 10
+                y -= 1
     #write your code
     character_x += x
     character_y += y
-    x = 0
-    y = 0
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
 
