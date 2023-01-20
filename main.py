@@ -5,14 +5,14 @@ from time import sleep
 
 #character
 character = pygame.image.load("jet.png")
-character_x = 200
-character_y = 400
+character_x = 350
+character_y = 725
 x = 0
 y = 0
 
 #basic settings
 pygame.init()
-DISPLAYSURF = pygame.display.set_mode((500, 500))
+DISPLAYSURF = pygame.display.set_mode((800, 800))
 pygame.display.set_caption('GAME')
 color = (255, 255, 255)
 red = (255, 0, 0)
@@ -40,11 +40,11 @@ while running:
     DISPLAYSURF.fill(color)
     DISPLAYSURF.blit(character, (character_x, character_y))
 
-    if character_x > 425 or character_x < -25:
+    if character_x > 725 or character_x < -25:
         pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(red)
         running = False
-    if character_y > 425 or character_y < -25:
+    if character_y > 725 or character_y < -25:
         pygame.display.set_caption("GAME OVER")
         DISPLAYSURF.fill(red)
         running = False
