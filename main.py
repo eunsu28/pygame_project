@@ -53,7 +53,7 @@ while running:
     #
     pygame.display.update()
 
+#finish
 sleep(4)
 pygame.quit()
 sys.exit()
-#fin
