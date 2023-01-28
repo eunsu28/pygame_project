@@ -43,6 +43,7 @@ while running:
     #gameover
     if character_x > 725 or character_x < -25:
         pygame.display.set_caption("GAME OVER")
+        print("you're dead")
         DISPLAYSURF.fill(red)
         running = False
     if character_y > 725 or character_y < -25:
